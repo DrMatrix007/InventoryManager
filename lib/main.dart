@@ -19,12 +19,6 @@ class MyApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final user = ref.watch(userProvider).value;
 
-    return MaterialApp(
-        title: 'Material App',
-        home: user != null
-            ? MainPage(
-                user: user,
-              )
-            : const LoginPage());
+    return MaterialApp(title: 'Material App', home: user != null ? MainPage() : const LoginPage());
   }
 }
